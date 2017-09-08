@@ -48,3 +48,8 @@ echo $srcpath
 echo $dstpath
 mkdir -p $dstpath
 ergodic $srcpath  $dstpath
+if [ -d $dstpath ] 
+then
+        newpath = ${$srcpath%?}"-new"
+        mv $dstpath $newpath 
+fi
